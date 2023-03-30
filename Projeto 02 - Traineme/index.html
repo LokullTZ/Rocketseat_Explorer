@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <title>Traine me</title>
+</head>
+<body class="page">
+    <!-- 
+        Header element:  
+        Elemento utilizado para criação do cabeçalho da página, onde as informações e demais elementos que compõem o cabeçalho são agrupados.
+    -->
+    <!-- <header></header> -->
+    <nav>
+        <a href="#">
+            <img src="./images/logo_image.svg" alt="Imagem do logo da instituição Traineme"/>
+        </a>
+         <ul>
+            <li><a href="#"> Home </a></li>
+            <li><a href="#"> Sobre </a></li>
+            <li><a href="#"> Treinar </a></li>
+        </ul>
+    </nav>
+
+    <!--  
+        Main element:
+        Elemento utilizado para agrupamento da zona de conteúdo principal do site.
+    -->
+    <main>
+        <section class="text">
+            <h1> Treinos <span>exclusivos</span> para você! </h1>
+            <p>
+                Nós criamos treinos <strong>exclusivos e únicos para você.</strong>
+                <br/>
+                Invista no seu corpo e <strong>tenha muito mais performance</strong> e qualidade de vida.
+            </p>
+            <button>
+                <img src="./images/whatsapp_image.svg" alt="WhatsApp imagem do logo."/>
+                Comece já!
+            </button>
+        </section>
+
+        <img src="./images/home_image.png" alt="Imagem de um desenho de uma pessoa praticando exercícios."/>
+    </main>
+
+    <!-- 
+        Footer element:
+        Elemento utilizado para agrupamento das informações e demais elementos responsáveis por representar o rodapé do site.
+     -->
+    <footer>
+        <!-- O texto abaixo foi colocado "diretamente" na tag footer, sem a necessidade de uma tag <p>. Neste caso já entende-se que este texto faz parte do footer, por isso
+            inserido diretamente na tag.
+        -->
+        Fale conosco no instagram <a href="https://instagram.com/" target="_blank">@traine.me</a>
+    </footer>
+
+    <!-- 
+        Essa imagem receberá, posteriormente, um esquema de visualização diferente através da propriedade CSS position. Sendo assim, este elemento existirá em uma nova "camada"
+        na página. Com esse ponto de vista, é como se fizesse parte de um outro contexto, por isso está declarada fora dos limites dos demais elementos.
+     -->
+    <img id="balls" src="./images/balls.svg" alt="Imagem de bolinhas decorativas, na cor verde, no canto inferior direito da página."/>
+</body>
+</html>
