@@ -101,6 +101,14 @@ main .card-wrapper{
 
 main .card-wrapper img {
     width: 100%;
+    animation: bottom-to-top 400ms 200ms ease-in-out backwards;
+    filter: blur(0) brightness(1);
+    transition: filter 200ms;
+}
+
+main .card-wrapper img:hover {
+    filter: blur(1.5px) brightness(0.9);
+    transition: filter 200ms;
 }
 
 main .card-wrapper button {
@@ -119,4 +127,35 @@ main .card-wrapper button {
     font-family: var(--ff-staatliches);
     font-size: 2rem;
     line-height: 3.4rem;
+
+    animation: top-to-bottom 600ms 200ms ease-in-out backwards;
+}
+
+main .card-wrapper button a {
+    text-decoration: none;
+    color: var(--fc-text);
+}
+
+@keyframes top-to-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottom-to-top {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
