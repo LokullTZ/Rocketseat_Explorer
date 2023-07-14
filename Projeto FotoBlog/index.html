@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo de Oliveira">
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Foto Blog</title>
+</head>
+<body>
+    <!-- Estrutura básica para iniciar um projeto -->
+    <div id="app">
+        <header class="container">
+            <img src="./assets/images/logomarca_image.svg" alt="Imagem da logomarca">
+            <nav>
+                <ul>
+                    <li> Home </li>
+                    <li class="active"> Galeria </li>
+                </ul>
+            </nav>
+            <form> 
+                <div class="input-wrapper">
+                    <label for="search"> Pesquise por imagens e coleções </label>
+                    <input type="text" id="search" placeholder="Pesquise por imagens e coleções"/> <!-- Lembrando que o placeholder não é lido por leitores de tela. Utilizar somnente ele pode causar problemas de acessibilidade -->
+                </div>
+            </form>
+            <img class="avatar" src="https://randomuser.me/api/portraits/women/34.jpg" alt="Imagem avatar do usuário">
+        </header>
+        <main> 
+            <div class="container">
+                <h1> Galeria </h1>
+                <section class="gallery">
+                    <figure class="image-item">
+                        <img src="./assets/images/workspace-eletrica-image.svg" alt="Imagem de uma escrivaninha com um notebook, um headset e uma luminária em forma de raio.">
+                        <figcaption class="image-description">
+                             <h2>Workspace Elétrica</h2>
+                             <div class="tags">
+                                <span>tag</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: .4s">
+                        <img src="./assets/images/dark-and-red.svg" alt="Imagem de uma mesa com um teclado e um mouse em leds azuis e uma ambientação em cor vermelha.">
+                        <figcaption class="image-description">
+                             <h2>Dark and Red</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: .6s">
+                        <img src="./assets/images/organizacao-e-grids.svg" alt="Imagem de uma escrivaninha com dois monitores de computador, um na vertical, um headset e um notebook fechado.">
+                        <figcaption class="image-description">
+                             <h2>Organização e grids</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: .8s">
+                        <img src="./assets/images/colmeia.svg" alt="Imagem de uma escrivaninha com dois monitores de computador, um acima do outra na horizontal.">
+                        <figcaption class="image-description">
+                             <h2>Colméia</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: 1s">
+                        <img src="./assets/images/setup-de-escritor.svg" alt="Imagem de uma escrivaninha simples, com um notebook aberto, um smartphone ao lado, um caderno e um headset.">
+                        <figcaption class="image-description">
+                             <h2>Setup de escritor</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: 1.2s">
+                        <img src="./assets/images/ergonomia-e-cores.svg" alt="Imagem de uma escrivaninha com um monitor exibindo uma imagem colorida, uma cadeira posicionada a frente.">
+                        <figcaption class="image-description">
+                             <h2>Ergonomia e cores</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: 1.4s">
+                        <img src="./assets/images/show-de-luzes.svg" alt="Imagem de uma escrivaninha simples, com um monitor, um smartphone e um notebook fechado. Um vaso de flores a esquerda.">
+                        <figcaption class="image-description">
+                             <h2>Show de luzes</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: 1.6s">
+                        <img src="./assets/images/Deep purple.svg" alt="Imagem de uma escrivaninha em um ambiente com luzes púrpuras, um monitor de computador e um notebook aberto ao centro.">
+                        <figcaption class="image-description">
+                             <h2>Deep purple</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                    <figure class="image-item" style="--startDelay: 1.8s">
+                        <img src="./assets/images/multiscreen.svg" alt="Imagem de vários tipos de dispositivos de tecnologia. Um televisor ao lado de um notebbok, ao lado de um smartphone.">
+                        <figcaption class="image-description">
+                             <h2>Multi-Screen</h2>
+                             <div class="tags">
+                                <span>TAG</span>
+                             </div> 
+                        </figcaption> <!-- Permite determinar um nome para a imagem, como um título. É visível para o usuário. -->
+                    </figure>
+                </section>
+            </div>
+        </main>
+        <footer class="container"><p> © 2023 - A Project Designed by Rocketseat. Builded by Leonardo de Oliveira </p></footer>
+    </div>
+</body>
+</html>

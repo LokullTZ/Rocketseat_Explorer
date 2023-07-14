@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Mulish', sans-serif;
+
+    --color-base-white: #FFFFFF;
+    --color-base-gray-100: #F5F5F5;
+    --color-base-gray-300: #8D8D99;
+    --color-base-gray-500: #3D3D3D;
+    --color-base-gray-900: #202024;
+}
+
+body {
+    font-size: 1.6rem;
+    background: var(--color-base-white);
+    color: var(--color-base-gray-900);
+}
+
+main {
+    background: var(--color-base-gray-100);
+    /* overflow-x/y: Permite que o elemento exiba a barra de rolagem (scroll) caso seu conteúdo cause um transbordo (caso o conteúdo exceda o tamanho do elemento.) */
+    /* Se o y for utilizado, será caso o conteúdo exceda o tamanho máximo de altura. Se x for utilizado, caso o conteúdo exceda o tamanho máximo de largura. */
+    overflow-y: scroll;
+}
+
+main h1 {
+    font-size: 2.4rem;
+    padding-top: 1.6rem;
+}
+
+header {
+    --startY: -100%;
+    animation: top-down-header 400ms;
+}
+
+header, nav, nav ul {
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+
+    list-style: none;
+
+    color: var(--color-base-gray-300)
+}
+
+nav {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header form {
+    flex: 1;
+    font-weight: 600;
+}
+
+footer {
+    /* Variável startY:
+
+        A variável startY está sendo utilizada, dinamicamente, para definir valores diferentes para os elementos header e footer, onde cada elemento tem um valor
+        diferente para que cause o efeito desejado na animação.
+
+    */
+    --startY: 100%;
+    animation: down-top-footer 400ms;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
+}
+
+#app {
+    display: grid;
+    /* max-content: Determina que o tamanho máximo do elemento será definido com base no tamanho do seu conteúdo. */
+    grid-template-rows: max-content 1fr max-content;
+
+    height: 100vh;
+}
+
+.container {
+    /* 
+        Função min():
+        Permite determinar, através de dois argumentos, o tamanho mínimo do elemento com base no cenário atual, onde o menor valor informado nos argumentos será o valor
+        mínimo do elemento.
+    */
+    width: min(112rem, 100%);
+    padding: 1.6rem 3.2rem;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+}
+
+li.active {
+    color: var(--color-base-gray-900);
+}
+
+.input-wrapper label {
+    /* 
+        O conjunto de propriedades a seguir permite "esconder" o elemento da tela, porém sem que ele perca suas propriedades funcionais (de acessibilidade por exemplo)
+    */
+
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1.6rem;
+    background-color: var(--color-base-gray-100);
+    border: 0;
+    border-radius: 0.6rem;
+    font-size: 1.6rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+    opacity: 0.5;
+    color: var(--color-base-gray-500);
+}
+
+/* Estilizações da galeria de imagens */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.2rem;
+    gap: 2.5rem;
+}
+
+.gallery img {
+    /* Propriedade aspect-ratio: Permite definir um comportamento para a imagem com base em uma detemrinação de proporção para a imagem. */
+    /* A propriedade object-fit com o valor cover ajuda a corrigir o posicionamento da imagem na proporção determinada, diminuindo efeitos de espremer ou esticar */
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    filter: none;
+    transform: none;
+    /* É possível utilizar o shorthand porém para cada propriedade com seus próprios comportamentos individualizados.
+    
+        Exemplo: 
+            transition: filter 200ms ease, transform 400ms ease-in-out;
+    */
+    transition: filter, transform 400ms;
+    transition-timing-function: ease-out;
+
+    display: block;
+}
+
+.gallery img:hover {
+    filter: hue-rotate(10deg) saturate(110%) contrast(105%);
+    transform: rotate(-1deg) scale(1.1);
+    /* É possível selecionar mais de uma propriedade separando por vírgula ou aplicar o valor "all" para selecionar todas as propriedades (transition-property) */
+    transition-property: filter, transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-out;
+}
+
+.image-item {
+    --startDelay: .2s;
+    animation: figure-item-appearing 400ms var(--startDelay) backwards;
+
+    background: var(--color-base-white);
+    border-radius: .8rem;
+    /* A propriedade overflow: hidden nesse caso está escondendo o transborde dos elementos internos do <figure>, fazendo com que seu tamanho seja "respeitado" */
+    overflow: hidden;
+}
+
+.image-item .image-description {
+    padding: 2.4rem;
+    background: var(--color-base-white);
+    position: relative;
+}
+
+.image-item .image-description h2 {
+    font-size: 1.8rem;
+}
+
+.tags {
+    margin-top: 1.2rem;
+}
+
+.tags span {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+    padding: .6rem;
+
+    background: var(--color-base-gray-100);
+    border-radius: .4rem;
+}
+
+@keyframes top-down-header {
+    0% {
+        transform: translateY(var(--startY));
+        opacity: 0;
+    }
+}
+
+@keyframes down-top-footer {
+    0% {
+        transform: translateY(var(--startY));
+        opacity: 0;
+    }
+}
+
+@keyframes figure-item-appearing {
+    0% {
+        opacity: 0;
+        transform: scale(.8)
+    }
+
+    50% {
+        opacity: .8;
+        transform: scale(1.2);
+    }
+}
