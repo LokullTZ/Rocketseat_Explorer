@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Segundo documentação do MDN, estas declarações funcionam somente em dispositivos macOS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --titles-color: #B52184;
+    --text-color: #312D64;
+    --pink-white-background-color: #F9F4FB;
+
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-family: 'Mulish', sans-serif;
+    overflow-x: none;
+}
+
+#page {
+    width: 43rem;
+    background-color: var(--pink-white-background-color);
+}
+
+h1 {
+    color: var(--titles-color);
+    font-weight: 900;
+    font-size: 3.2rem;
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 35.2rem;
+    padding: 2.6rem;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    filter: drop-shadow(0 3.3px 1.3rem rgba(0, 0, 0, 0.25));
+}
+
+.card img { 
+    margin-bottom: 3.2rem;
+}
+
+.card h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--titles-color);
+    margin-bottom: 1.8rem;
+}
+
+.card p {
+    font-weight: 600;
+    color: var(--text-color);
+    width: 26.5rem;
+}
+
+#welcome-page {
+    align-content: center;
+}
+
+#welcome-page :first-child {
+    margin-bottom: 1.8rem;
+}
+
+#welcome-page h1 {
+    margin-bottom: 0.5rem;
+}
+
+#welcome-page h2 {
+    margin-bottom: 3.6rem;
+}
+
+#welcome-page :last-child {
+    width: 5.8rem;
+    height: 10.4rem;
+    border: none;
+    background: var(--pink-white-background-color);
+    margin-bottom: 9.2rem;
+}
+
+#main-content {
+    padding: 5.4rem 3.8rem;
+    background: linear-gradient(to right bottom, #343193, #302C63);
+
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    transform: translateY(0);
+}
+
+#contact-section {
+    padding: 6.4rem 4rem;
+    background: var(--pink-white-background-color);
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+#contact-section .input-wrapper {
+    padding: 1.2rem 1.4rem;
+
+    width: 34.8rem;
+    height: 4.8rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    position: relative;
+
+}
+
+#contact-section .input-wrapper img {
+    position: relative;
+    z-index: 1;
+}
+
+#contact-section .input-wrapper input {
+    width: 34.8rem;
+    height: 4.8rem;
+    padding-left: 4.8rem;
+    border: 1.5px solid var(--text-color);
+    border-radius: 1.6rem;
+    background: var(--pink-white-background-color);
+
+    position: absolute;
+    left: 0;
+}
+
+#contact-section .input-wrapper input:focus {
+    border: none;
+    outline: 1.5px solid #170bc2;
+    opacity: 1;
+}
+
+#contact-section .input-wrapper input::placeholder {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#contact-section textarea {
+    width: 34.8rem;
+    height: 12.6rem;
+    border-radius: 1.6rem;
+    border: 1.5px solid var(--text-color);
+    padding: 1.2rem 1.4rem;
+    resize: none;
+    background-color: var(--pink-white-background-color);
+}
+
+#contact-section textarea::placeholder {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+#contact-section textarea:focus {
+    border: none;
+    outline: 1.5px solid #170bc2;
+}
+
+#contact-section h2:first-child {
+    font-family: 'Mulish', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--titles-color);
+    margin-bottom: 4.4rem;
+}
+
+#contact-section button {
+    width: 15.1rem;
+    height: 4.5rem;
+    border-radius: 1.6rem;
+    margin-top: 2.4rem;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background: linear-gradient(to right bottom, #343193, #302C63);
+    border: none;
+}
+
+footer {
+    background: linear-gradient(to right bottom, #343193, #302C63);
+    color: #FFFFFF;
+    width: 43rem;
+    height: 7.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+@media(min-width: 1440px){
+    #page {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .section-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'title img' 'button img';
+    }
+
+    .section-wrapper img {
+        grid-area: img;
+        width: 72rem;
+        height: 74rem;
+        margin-right: 2.9rem;
+        align-self: flex-start;
+    }
+
+    .section-wrapper h1 {
+        grid-area: title;
+        justify-self: center;
+        font-size: 5.8rem;
+    }
+
+    .section-wrapper h2 {
+        grid-area: title;
+        justify-self: center;
+        align-self: flex-end;
+        font-size: 3.8rem;
+    }
+
+    #welcome-page {
+        height: 100%;
+    }
+
+    #welcome-page a {
+        grid-area: button;
+        justify-self: center;
+        animation: scrollButton 3500ms infinite backwards ease;
+    }
+
+    #welcome-page img:hover {
+        cursor: pointer;
+    }
+
+    @keyframes scrollButton {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    #main-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6rem;
+        height: 58rem;
+    }
+
+    #main-content .card {
+        height: 100%;
+    }
+
+    #main-content .card img {
+        width: 9.7rem;
+        height: 9.7rem;
+    }
+
+    #main-content .card p {
+        font-size: 1.8rem;
+    }
+
+    #contact-section {
+        padding-left: 10.9rem;
+        background-image: url('./assets/images/contact-section-desktop-background.svg');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    #contact-section form {
+        width: 60rem;
+    }
+
+    #contact-section #contact-form .input-wrapper input, #contact-section #contact-form textarea {
+        width: 58rem;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Leonardo de Oliveira">
+    <meta name="description" content="Página desafio desenvolvida durante o curso Explorer, programa Educacional da Rocketseat, com objetivo de praticar os conhecimentos adquiridos durante a jornada.">
+    <meta name="keywords" content="educacional, estudos, programação, desenvolvimento, projeto, prática.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Desafio Intensivão</title>
+</head>
+<body>
+    <div id="page">
+        <section class="section-wrapper" id="welcome-page">
+            <img src="./assets/images/header-image.svg" alt="Imagem de planetas e um astronauta, flutuando em meio a galáxia.">
+            <h1>Explore sem limites</h1>
+            <h2>Porque o aprendizado é contínuo</h2>
+            <a href="#main-content">
+                <button type="button" id="scroll-button">
+                    <img src="./assets/images/header-button.svg" alt="Seta para baixo representando um botão para acesso aos demais conteúdos da página.">
+                </button>
+            </a>
+        </section>
+        <main class="section-wrapper" id="main-content">
+            <div class="card">
+                <img src="./assets/images/card1-moon.svg" alt="Imagem de uma lua laranja.">
+                <h2> Não pare nunca </h2>
+                <p>
+                    Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca". Estudar de forma consistente e contínua é a chave para o progresso e a conquista de seus objetivos.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/images/card2-moon.svg" alt="Imagem de uma lua azul.">
+                <h2> Só volta </h2>
+                <p>
+                    Se você parou ou perdeu o ritmo em alguma atividade ou projeto, saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.
+                </p>
+            </div>
+            <div class="card">
+                <img src="./assets/images/card3-moon.svg" alt="Imagem de uma lua rosada.">
+                <h2> Siga seu ritmo </h2>
+                <p>
+                    Avançar pouco a pouco mantém progresso constante em objetivos, evitando parar ou desistir. Mesmo pequenos passos nos aproximam do destino e motivam a continuidade. Não subestime o poder de cada ação rumo ao objetivo final.
+                </p>
+            </div>
+        </main>
+        <section id="contact-section">
+            <h2>Entre em contato</h2>
+            <form id="contact-form">
+                <div class="input-wrapper">
+                    <img src="./assets/images/contact-user-image.svg" alt=""/>
+                    <input type="text" name="nome" maxlength="20" placeholder="Digite seu nome"/>
+                </div>
+                <div class="input-wrapper">
+                    <img src="./assets/images/contact-email-image.svg" alt=""/>
+                    <input type="email" name="email" maxlength="45" placeholder="Digite seu e-mail"/>
+                </div>
+                <textarea name="description" placeholder="Digite seu comentário aqui"></textarea>
+            </form>
+            <button type="submit" form="contact-form">Enviar Mensagem</button>
+        </section>
+        <script src="./script.js"></script>
+        <footer>
+            <p> © 2023 - Rocketseat Explorer </p>
+        </footer>
+    </div>
+</body>
+</html>
